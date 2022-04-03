@@ -1,18 +1,18 @@
 import {Link} from "react-router-dom"
 import 'bulma/css/bulma.min.css'
+import blackImg from './img-logo/black.png'
 
 const NavBar = () =>{
 
-    const img = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTryh_Qnl6pGPl9BMlSMhg8Z3Tixv2phJuqOWUXxJlKNl17iZaQTdpV0QDBaGYN0qgamM0&usqp=CAU"
     return (
         <>
             <div>
-                <nav className="navbar is-black">
+                <nav className="navbar is-black" aria-label="main navigation" role="navigation">
                     <div className="navbar-brand">
                         <Link className="navbar-item" to="/home">
-                            <figure className="nav-logo">
-                            <img src= {img} alt="Logo de página" width="100" height="100"/>
-                            </figure>
+                            <div width="150" height="80">
+                            <img src= {blackImg} alt="Logo de página"/>
+                            </div>
                         </Link>
                         <div className="navbar-burger" data-target="navbarExampleTransparentExample">
                             <span>Últimos lanzamientos</span>
