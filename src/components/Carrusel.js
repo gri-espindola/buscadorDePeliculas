@@ -1,14 +1,28 @@
 import { Row, Col } from "./Carrusel-libreria";
 //import ReactDOM from "react-dom";
 import RBCarousel from "react-bootstrap-carousel";
+import { useEffect, useState } from "react";
+
+
 
 const Carrusel =()=>{
 
 //   const styles = { height: 400, width: "100%" };
 //  const icon_glass = <span className="fa fa-glass" />;
+//    const {peliculas} = useFetchPeliculas("popular", "tv")
     const icon_music = <span className="fa fa-music" />;
 
-  
+    const [elemento, setElemento] = useState([]) 
+    
+    useEffect(() => {
+        fetch(`https://api.themoviedb.org/3/trending/movie/day?api_key=d2db916ed787e45a269779c746706c07`)
+        .then(res => res.json())
+        .then(data =>{
+            setElemento(data.results)
+        })
+    }, [])
+
+    console.log (elemento)
  return(
      <>
       <div className="container-fluid" style={{ paddingBottom: 20 }}>
@@ -22,27 +36,15 @@ const Carrusel =()=>{
               animation={true}
               pauseOnVisibility = {true}
             >
+              {elemento.map (img =>
+                {
               <div style={{ height: 400 }}>
-                <img
-                  style={{ width: "100%", height: "100%" }}
-                  src="https://www.w3schools.com/bootstrap/ny.jpg"
-                  alt="imagen carrusel"
-                />
+                <img 
+                src={`https://image.tmdb.org/t/p/original${img.poster_path}`}
+                alt={`Poster de ${img.title}`}/>
               </div>
-              <div style={{ height: 400 }}>
-                <img
-                  style={{ width: "100%", height: "100%" }}
-                  src="https://www.w3schools.com/bootstrap/ny.jpg"
-                  alt="imagen carrusel"
-                />
-              </div>
-              <div style={{ height: 400 }}>
-                <img
-                  style={{ width: "100%", height: "100%" }}
-                  src="https://www.w3schools.com/bootstrap/ny.jpg"
-                  alt="imagen carrusel"
-                />
-              </div>
+                })}
+              
               </RBCarousel>
               </Col>
           </Row>
