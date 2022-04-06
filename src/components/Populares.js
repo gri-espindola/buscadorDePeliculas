@@ -3,13 +3,13 @@ import useFetchPeliculas from "../hooks/useFetchPeliculas"
 
 const Populares =()=>{
 
-const peliculas = useFetchPeliculas("upcoming", "movie")
+const peliculas = useFetchPeliculas("popular", "movie")
 
 
     return (
         <>
         <div>
-            <h2 className="title is-2 is-spaced">Ultimos lanzamientos</h2>
+            <h2 className="title is-2 is-spaced">Populares</h2>
             <div className="is-flex">
                 {peliculas.map(pelicula => (
                     <article className="card-content">
