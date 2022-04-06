@@ -8,14 +8,15 @@ const peliculas = useFetchPeliculas("upcoming", "movie")
 
     return (
         <>
-        <div>
+        <div className="">
             <h2 className="title is-2 is-spaced">Ultimos lanzamientos</h2>
-            <div className="is-flex">
+            <div className="is-flex is-flex-wrap-wrap">
                 {peliculas.map(pelicula => (
-                    <article className="card-content">
+                    <article style={{width:"300px"}}>
                         <div className="card-image">
-                            <figure className="image" width="auto" height="auto">
+                            <figure className="image">
                                 <img 
+                                style={{width:"100%", height:"420px"}}
                                 src={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`}
                                 alt= ""/>
                             </figure>
