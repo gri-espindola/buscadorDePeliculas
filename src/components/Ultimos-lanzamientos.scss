@@ -1,3 +1,31 @@
-.card-content{
-    border: 2px solid black;
+.box-lanzamientos{
+    background-color: #D68910;
+.titulo{
+    display: flex;
+    justify-content: center;
+}
+.card-lanzamientos{
+    border: 3px solid #A04000;
+    margin: 5px;
+    border-radius: 6px;
+    .img-lanzamientos{
+        height: fit-content;
+    }
+    .title-lanzamientos{
+        text-align: center;
+        border-bottom: 3px solid #A04000;
+        padding: 10px;
+        font-size: 20px;      
+    }
+    .icono-posicion{
+        background-color: #6E2C00;
+    .icon-lanzamientos{
+        padding-left: 50%;
+        .fa-eye{
+        font-size: 30px;
+        color: #EB984E;                
+        }
+    }
+}
+}
 }
