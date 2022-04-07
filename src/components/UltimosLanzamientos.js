@@ -1,4 +1,5 @@
 import useFetchPeliculas from "../hooks/useFetchPeliculas"
+import './Ultimos-lanzamientos.scss';
 
 
 const UltimosLanzamientos =()=>{
