@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.nav{
+
+    margin-top: 0px;
+    background-color: #515A5A;
+    height: 100px;
+    .nav-img{
+        width: 80px;
+        height: 90px;
+        text-align: center;
+    }
+    .nav-link{
+        color: whitesmoke;
+        text-decoration: none;
+        font-family: 'Pacifico', cursive;
+        font-size: 20px;
+    }
+    .burger-span{
+        background-color: beige;
+    }
+}
