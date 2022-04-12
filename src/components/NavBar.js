@@ -18,12 +18,12 @@ const NavBar = () =>{
                         </Link>
                     </div>
 
-                    <div class="navbar-item has-dropdown is-hoverable">
+                    <div className="navbar-item has-dropdown is-hoverable">
                         <a href="./home" class="navbar-link" aria-expanded="false">
                         Menú
                         </a>
 
-                        <div class="navbar-dropdown">
+                        <div className="navbar-dropdown">
                             <Link className="navbar-item nav-link" to="/home">
                                 Home
                             </Link>

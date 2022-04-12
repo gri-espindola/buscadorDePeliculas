@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
-import Carrusel from "./components/Carrusel"
+import Carrusel from "./components/Carrusel";
+import CarruselDetalles from "./components/Carrusel-detalles";
 import TrailerCarrusel from "./components/TrailerCarrusel"
 import DetallesPopulares from "./components/DetallesPopulares";
 import TrailerPopulares from "./components/TrailerPopulares";
@@ -18,6 +19,7 @@ import 'bulma/css/bulma.min.css'
 import './App.css';
 
 
+
 const App =()=>{
   return (
     <BrowserRouter>
@@ -25,7 +27,8 @@ const App =()=>{
     <Routes>
       <Route path="/" element={<Home />}/>
       <Route path="/:idCarrusel" element={<Carrusel />}/>
-      <Route path="/:idCarrusel/:idTrailerCarrusel" element={<TrailerCarrusel />}/>
+      <Route path="/:idCarrusel/:idCarruselDetalles" element={<CarruselDetalles/>}/>
+      <Route path="/:idCarrusel/:idCarruselDetalles/:idTrailerCarrusel" element={<TrailerCarrusel />}/>
       <Route path="/:idPopularesYMejoresPuntadas" element={<PopularesYMejoresPuntadas />} />
       <Route path="/ultimos-lanzamientos" element={<UltimosLanzamientos />}/>
       <Route path="/ultimos-lanzamientos/:idDetallesUltimosLanzamientos" element={<DetallesUltimosLanzamientos />}/>
