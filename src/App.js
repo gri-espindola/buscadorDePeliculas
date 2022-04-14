@@ -27,8 +27,8 @@ const App =()=>{
     <Routes>
       <Route path="/" element={<Home />}/>
       <Route path="/:idCarrusel" element={<Carrusel />}/>
-      <Route path="/:idCarrusel/:idCarruselDetalles" element={<CarruselDetalles/>}/>
-      <Route path="/:idCarrusel/:idCarruselDetalles/:idTrailerCarrusel" element={<TrailerCarrusel />}/>
+      <Route path="/Carrusel/:idCarruselDetalles" element={<CarruselDetalles/>}/>
+      <Route path="/Carrusel/:idCarruselDetalles/:idTrailerCarrusel" element={<TrailerCarrusel />}/>
       <Route path="/:idPopularesYMejoresPuntadas" element={<PopularesYMejoresPuntadas />} />
       <Route path="/ultimos-lanzamientos" element={<UltimosLanzamientos />}/>
       <Route path="/ultimos-lanzamientos/:idDetallesUltimosLanzamientos" element={<DetallesUltimosLanzamientos />}/>

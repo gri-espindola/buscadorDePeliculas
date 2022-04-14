@@ -34,7 +34,7 @@ const Carrusel =({img})=>{
                   <div className="carousel-caption" style={{textShadow:"2px 2px 2px black"}}>              
                   <h3>{imagen.title}</h3>
                   <p>{imagen.overview}</p>
-                  <Link to= "./idCarruselDetalles">
+                  <Link to={`/Carrusel/${imagen.id}`}>
                     <button 
                   style={{backgroundColor:"DarkKhaki", color:"black", borderRadius:"7px", width:"160px", border:"Olive, solid, 3px"}}>
                         Ver más

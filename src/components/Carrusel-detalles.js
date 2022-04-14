@@ -1,24 +1,33 @@
 import { useParams } from "react-router-dom";
-//import { useState} from "react";
-import useFetchTrending from "../hooks/useFetchTrending";
+import { useState, useEffect} from "react";
+
 
 
 const CarruselDetalles =()=>{
 
     const params = useParams ()
-    const detallesCarrusel = useFetchTrending(params)
+    
+    const [detalle, setDetalle] = useState({})
+
+    useEffect(() => {
+        fetch(`https://api.themoviedb.org/3/movie/${params.idCarruselDetalles}?api_key=d2db916ed787e45a269779c746706c07&`)
+        .then(res => res.json())
+        .then(data => {
+        setDetalle(data.results)
+        })
+    }, [])
     
 
     return (
         <>
 
             <div>
-                <article key={detallesCarrusel.id}>
-                    <h3>{detallesCarrusel.title}</h3>
+                <article key={detalle.id}>
+                    <h3>{detalle.title}</h3>   
                     <h4>Sinopsis</h4>
-                    <p>{detallesCarrusel.overview}</p>
+                    <p>{detalle.overview}</p>
                     <h4>Genero</h4>
-                    <p>{detallesCarrusel.genre}</p>
+                    <p>{detalle.genre}</p>
                 </article>                
                 
             </div>
