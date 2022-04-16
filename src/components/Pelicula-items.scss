@@ -1,0 +1,12 @@
+.columns-movie{
+    width: 50%;
+    .movie{
+    height: 5em;
+    line-height: 1em;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    .item-movie{
+        align-items: center;
+    }
+    }
+}

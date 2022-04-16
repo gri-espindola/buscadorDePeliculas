@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
-import Carrusel from "./components/Carrusel";
 import CarruselDetalles from "./components/Carrusel-detalles";
 import TrailerCarrusel from "./components/TrailerCarrusel"
 import DetallesPopulares from "./components/DetallesPopulares";
@@ -13,7 +12,8 @@ import Buscador from "./components/Buscador";
 import DetalleBusqueda from "./components/DetalleBusqueda";
 import TrailerBusqueda from "./components/TrailerBusqueda";
 import NavBar from "./components/NavBar";
-import PopularesYMejoresPuntadas from "./components/PopularesYMejoresPuntadas";
+import PeliculasPopulares from "./components/PeliculasPopulares";
+import PeliculasMejoresPuntadas from "./components/PeliculasMejoresPuntadas"
 import DetallesUltimosLanzamientos from "./components/DetallesUltimosLanzamientos";
 import 'bulma/css/bulma.min.css'
 import './App.css';
@@ -25,11 +25,11 @@ const App =()=>{
     <BrowserRouter>
     <NavBar />
     <Routes>
-      <Route path="/" element={<Home />}/>
-      <Route path="/:idCarrusel" element={<Carrusel />}/>
-      <Route path="/Carrusel/:idCarruselDetalles" element={<CarruselDetalles/>}/>
-      <Route path="/Carrusel/:idCarruselDetalles/:idTrailerCarrusel" element={<TrailerCarrusel />}/>
-      <Route path="/:idPopularesYMejoresPuntadas" element={<PopularesYMejoresPuntadas />} />
+      <Route path="/:idCarrusel" element={<Home />}/>
+      <Route path="/Home/:idCarruselDetalles" element={<CarruselDetalles/>}/>
+      <Route path="/Home/:idCarruselDetalles/:idTrailerCarrusel" element={<TrailerCarrusel />}/>
+      <Route path="/Home/:idPeliculasPopulares" element={<PeliculasPopulares />} />
+      <Route path="/Home/:idPeliculasMejoresPuntadas" element={<PeliculasMejoresPuntadas />} />
       <Route path="/ultimos-lanzamientos" element={<UltimosLanzamientos />}/>
       <Route path="/ultimos-lanzamientos/:idDetallesUltimosLanzamientos" element={<DetallesUltimosLanzamientos />}/>
       <Route path="/ultimos-lanzamientos/:idDetallesUltimosLanzamientos/:idDetallesMovie" element={<DetallesMovie />}/>

@@ -1,7 +1,7 @@
 import useFetchPeliculas from "../hooks/useFetchPeliculas";
 import './Ultimos-lanzamientos.scss';
 import {Link} from "react-router-dom";
-import DetallesUltimosLanzamientos from "./DetallesUltimosLanzamientos";
+
 
 
 const UltimosLanzamientos =()=>{
