@@ -1,12 +1,12 @@
-.columns-movie{
-    width: 50%;
-    .movie{
-    height: 5em;
-    line-height: 1em;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    .item-movie{
-        align-items: center;
-    }
+.img-movie{
+    border-radius: 7px;
+    padding: 2px;
+}
+.icon-title{
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    .titulo{
+        text-align: center;
     }
 }

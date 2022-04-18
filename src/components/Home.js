@@ -13,9 +13,8 @@ const Carrusel =({img})=>{
   const iconArrowLeft = <span className="fa fa-angle-left"></span>;
   const iconArrowRight = <span className="fa fa-angle-right"></span>;
   const imagen = useFetchTrending()
-  const {cargando, peliculasPopulares} = useFetchPeliculas("popular","movie");
-  const {cargando: cargandoMasPuntuadas, peliculasPopulares: peliculasMasPuntuadas} = useFetchPeliculas("top_rated","movie");
-
+  const { cargando, peliculas: peliculasPopulares } = useFetchPeliculas("popular","movie");
+  const {cargando: cargandoMasPuntuadas,peliculas: peliculasMasPuntuadas} = useFetchPeliculas("top_rated", "movie");
 
  return(
      <>
@@ -39,7 +38,12 @@ const Carrusel =({img})=>{
                   <p>{imagen.overview}</p>
                   <Link to={`/Home/${imagen.id}`}>
                     <button 
-                  style={{backgroundColor:"DarkKhaki", color:"black", borderRadius:"7px", width:"160px", border:"Olive, solid, 3px"}}>
+                  style={{
+                    backgroundColor:"DarkKhaki",
+                    color:"black",
+                    borderRadius:"7px",
+                    width:"160px",
+                    border:"Olive, solid, 3px"}}>
                         Ver más
                     </button>
                   </Link>
@@ -50,16 +54,16 @@ const Carrusel =({img})=>{
               </RBCarousel>
               </Col>
           </Row>
-          <ColumnsHome
-          titulo={"Peliculas Populares"}
-          cargando={cargando}
-          peliculas={peliculasPopulares}/>
-          <ColumnsHome/>
-          <ColumnsHome
-          titulo={"Peliculas Mejores Puntuadas"}
-          cargando={cargandoMasPuntuadas}
-          peliculas={peliculasMasPuntuadas}/>
-          <ColumnsHome/>
+          <div className="container is-flex is-justify-content-center is-align-items-center">
+            <ColumnsHome
+            titulo={"Peliculas Populares"}
+            cargando={cargando}
+            peliculas={peliculasPopulares}/>
+            <ColumnsHome
+            titulo={"Peliculas Mejores Puntuadas"}
+            cargando={cargandoMasPuntuadas}
+            peliculas={peliculasMasPuntuadas}/>
+          </div>
       </div>
      </>
  )
