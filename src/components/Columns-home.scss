@@ -1,0 +1,14 @@
+.box-columns{
+    width: 50%;
+    margin: 10px;
+    .titulo-columns{
+        text-align: center;
+    }
+    .movie{
+        height: 300px;
+        line-height: 1em;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        padding: 3px;
+    }
+}

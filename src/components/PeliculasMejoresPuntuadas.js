@@ -1,27 +1,28 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect} from "react";
 import {Link} from "react-router-dom";
-import "./DetalleCarrusel.scss";
 
 
 
-const CarruselDetalles =()=>{
+
+const PeliculasMejoresPuntuadas =({id, categoria, trailer})=>{
 
     const params = useParams ()
     
     const [detalle, setDetalle] = useState({})
 
 
-    useEffect(() => {
-        fetch(`https://api.themoviedb.org/3/movie/${params.idCarruselDetalles}?api_key=d2db916ed787e45a269779c746706c07&language=es`)
-        .then(res => res.json())
-        .then(data => {
-        setDetalle(data)
-        })
-    }, [])
+    useEffect(()=> {
+        fetch(`https://api.themoviedb.org/3/movie/${params.idPeliculasMejoresPuntuadas}?api_key=07b7fbf0aa198d742f7f3020308675d2&language=es`)
+        .then(res=> res.json())
+        .then(data => { 
+        setDetalle(data);
+    });
+}, []);
     
     const backgroundImageURL =`https://image.tmdb.org/t/p/original${detalle.backdrop_path}`;
     const containerStyle = {backgroundImage:`url(${backgroundImageURL})`};
+    const URLTrailer = `https://api.themoviedb.org/3/movie/${detalle.id}/videos?api_key=6a93319b2d78795675b8bd9aa0965a95&language=es-ES`;
 
 
     return (
@@ -35,8 +36,8 @@ const CarruselDetalles =()=>{
                         src={`https://image.tmdb.org/t/p/original${detalle.backdrop_path}`}
                         className= "img"/>
                         <button className="button is-white is-large mt-5">
-                            <Link className="fa fa-play" id="icon-img" to={`/Home/${detalle.video}`}>
-                                <span className="ml-3 subtitle is-6" id="icon">Ver trailer</span>
+                            <Link className="fa fa-play" id="icon-img" to={`/Home/${categoria}/${id}/${id}`}>
+                                <span className="ml-3 subtitle is-6" id="icon" trailer={trailer}>Ver trailer</span>
                             </Link>
                         </button>
                     </figure>
@@ -60,4 +61,4 @@ const CarruselDetalles =()=>{
 
 
 
-export default CarruselDetalles
+export default PeliculasMejoresPuntuadas

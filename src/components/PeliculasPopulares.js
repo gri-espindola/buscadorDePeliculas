@@ -1,24 +1,24 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect} from "react";
 import {Link} from "react-router-dom";
-import "./DetalleCarrusel.scss";
 
 
 
-const CarruselDetalles =()=>{
+
+const PeliculasPopulares =()=>{
 
     const params = useParams ()
     
     const [detalle, setDetalle] = useState({})
 
 
-    useEffect(() => {
-        fetch(`https://api.themoviedb.org/3/movie/${params.idCarruselDetalles}?api_key=d2db916ed787e45a269779c746706c07&language=es`)
-        .then(res => res.json())
-        .then(data => {
-        setDetalle(data)
-        })
-    }, [])
+    useEffect(()=> {
+        fetch(`https://api.themoviedb.org/3/movie/${params.idPeliculasPopulares}?api_key=07b7fbf0aa198d742f7f3020308675d2&language=es`)
+        .then(res=> res.json())
+        .then(data => { 
+        setDetalle(data);
+    });
+}, []);
     
     const backgroundImageURL =`https://image.tmdb.org/t/p/original${detalle.backdrop_path}`;
     const containerStyle = {backgroundImage:`url(${backgroundImageURL})`};
@@ -60,4 +60,4 @@ const CarruselDetalles =()=>{
 
 
 
-export default CarruselDetalles
+export default PeliculasPopulares

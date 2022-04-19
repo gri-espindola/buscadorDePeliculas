@@ -1,7 +1,7 @@
 import useFetchPeliculas from "../hooks/useFetchPeliculas";
 import './Ultimos-lanzamientos.scss';
 import {Link} from "react-router-dom";
-import DetallesUltimosLanzamientos from "./DetallesUltimosLanzamientos";
+
 
 
 const UltimosLanzamientos =()=>{
@@ -23,7 +23,7 @@ const peliculas = useFetchPeliculas("upcoming", "movie")
                                 className="img-lanzamientos"
                                 style={{width:"100%", height:"420px"}}
                                 src={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`}
-                                alt= ""/>
+                                alt= {pelicula.title}/>
                             </figure>
                         </div>
                         <div className="card-media card-descripcion">
@@ -32,7 +32,7 @@ const peliculas = useFetchPeliculas("upcoming", "movie")
                             </div>
                             <div className="icono-posicion">
                             <div className="icon icon-lanzamientos">
-                                <Link className="fa fa-eye" to="/DetallesUltimosLanzamientos" >
+                                <Link className="fa fa-eye" to="/:idDetallesUltimosLanzamientos" >
                                 </Link>
                             </div>
                             </div>
