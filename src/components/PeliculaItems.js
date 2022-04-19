@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import "./Pelicula-items.scss";
+import { BsFillArrowRightCircleFill } from "react-icons/bs";
 
 
 
-const PeliculaItems = ({titulo, imagen})=>  {
+const PeliculaItems = ({titulo, imagen, id, categoria})=>  {
 
 
     return(
@@ -16,11 +17,11 @@ const PeliculaItems = ({titulo, imagen})=>  {
                     <div className="icon-title">
                     <h5 className="is-size-6 titulo">{titulo}</h5>
                         <Link 
-                        to={`/Home/${titulo.id}`} 
+                        to={`/Home/${categoria}/${id}`}
                         className="panel-block is-active"
                         >
                         <span className="">
-                        <i className="fa fa-arrow-right" aria-hidden="true"></i>
+                            <BsFillArrowRightCircleFill/>
                         </span>
                         </Link>
                     </div>
@@ -28,5 +29,7 @@ const PeliculaItems = ({titulo, imagen})=>  {
         </>
     )
 }
+
+//<i className="fa fa-arrow-right" aria-hidden="true"></i>
 
 export default PeliculaItems

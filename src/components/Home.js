@@ -56,10 +56,12 @@ const Carrusel =({img})=>{
           </Row>
           <div className="container is-flex is-justify-content-center is-align-items-center">
             <ColumnsHome
+            categoria= {"populares"}
             titulo={"Peliculas Populares"}
             cargando={cargando}
             peliculas={peliculasPopulares}/>
             <ColumnsHome
+            categoria={"mejoresPuntuadas"}
             titulo={"Peliculas Mejores Puntuadas"}
             cargando={cargandoMasPuntuadas}
             peliculas={peliculasMasPuntuadas}/>
