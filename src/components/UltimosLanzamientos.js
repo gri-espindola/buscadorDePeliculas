@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 
 const UltimosLanzamientos =()=>{
 
-const peliculas = useFetchPeliculas("upcoming", "movie")
+const {peliculas} = useFetchPeliculas("upcoming", "movie")
 
 
 
