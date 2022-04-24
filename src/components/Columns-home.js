@@ -1,5 +1,6 @@
 import PeliculaItems from "./PeliculaItems";
 import "./Columns-home.scss";
+import Loading from "./Loading";
 
 
 const ColumnsHome = ({titulo, cargando, peliculas, categoria, trailer}) =>{
@@ -12,7 +13,7 @@ const ColumnsHome = ({titulo, cargando, peliculas, categoria, trailer}) =>{
                             <h3>{titulo}</h3>
                             </p>
                             <div className="movie">
-                            {cargando && <p><h4>Esta cargando</h4></p>}
+                            {cargando && <Loading/>}
                             {peliculas?.map(detalle =>(
                                 <PeliculaItems
                                 id={detalle.id}
@@ -20,7 +21,7 @@ const ColumnsHome = ({titulo, cargando, peliculas, categoria, trailer}) =>{
                                 titulo={detalle.title}
                                 key={detalle.id}
                                 imagen={detalle.poster_path}
-                                trailer={trailer}
+                                //trailer={trailer}
                                 />
                             ))}
                             </div>

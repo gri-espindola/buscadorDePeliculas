@@ -12,9 +12,9 @@ import Buscador from "./components/Buscador";
 import DetalleBusqueda from "./components/DetalleBusqueda";
 import TrailerBusqueda from "./components/TrailerBusqueda";
 import NavBar from "./components/NavBar";
-import PeliculasPopulares from "./components/PeliculasPopulares";
+//import PeliculasPopulares from "./components/PeliculasPopulares";
 import TrailerPeliculasPopulares from "./components/TrailerPeliculasPopulares";
-import PeliculasMejoresPuntuadas from "./components/PeliculasMejoresPuntuadas";
+//import PeliculasMejoresPuntuadas from "./components/PeliculasMejoresPuntuadas";
 import TrailerPeliculasMejoresPuntuadas from "./components/TrailerPeliculasMejoresPuntuadas";
 import DetallesUltimosLanzamientos from "./components/DetallesUltimosLanzamientos";
 import 'bulma/css/bulma.min.css'
@@ -30,9 +30,9 @@ const App =()=>{
       <Route path="/:idCarrusel" element={<Home />}/>
       <Route path="/Home/:idCarruselDetalles" element={<CarruselDetalles/>}/>
       <Route path="/Home/:idCarruselDetalles/:idTrailerCarrusel" element={<TrailerCarrusel />}/>
-      <Route path="/Home/populares/:idPeliculasPopulares" element={<PeliculasPopulares />} />
+      <Route path="/Home/populares/:idDetallesMovie" element={<DetallesMovie />} />
       <Route path="/Home/populares/:idPeliculasPopulares/:idTrailerPeliculasPopulares" element={<TrailerPeliculasPopulares />} />
-      <Route path="/Home/mejoresPuntuadas/:idPeliculasMejoresPuntuadas" element={<PeliculasMejoresPuntuadas />} />
+      <Route path="/Home/mejoresPuntuadas/:idDetallesMovie" element={<DetallesMovie />} />
       <Route path="/Home/mejoresPuntuadas/:idPeliculasMejoresPuntuadas/:idTrailerPeliculasMejoresPuntuadas" element={<TrailerPeliculasMejoresPuntuadas />} />
       <Route path="/ultimos-lanzamientos" element={<UltimosLanzamientos />}/>
       <Route path="/ultimos-lanzamientos/:idDetallesUltimosLanzamientos" element={<DetallesUltimosLanzamientos />}/>

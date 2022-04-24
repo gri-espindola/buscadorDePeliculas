@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 
 
 
-const PeliculasMejoresPuntuadas =({id, categoria, trailer})=>{
+const PeliculasMejoresPuntuadas =({id, categoria})=>{
 
     const params = useParams ()
     
@@ -22,9 +22,9 @@ const PeliculasMejoresPuntuadas =({id, categoria, trailer})=>{
     
     const backgroundImageURL =`https://image.tmdb.org/t/p/original${detalle.backdrop_path}`;
     const containerStyle = {backgroundImage:`url(${backgroundImageURL})`};
-    const URLTrailer = `https://api.themoviedb.org/3/movie/${detalle.id}/videos?api_key=6a93319b2d78795675b8bd9aa0965a95&language=es-ES`;
+   // const URLTrailer = `https://api.themoviedb.org/3/movie/${detalle.id}/videos?api_key=6a93319b2d78795675b8bd9aa0965a95&language=es-ES`;
 
-
+   console.log(`${categoria}/${id}/${id}`);
     return (
         <>
 
@@ -36,12 +36,11 @@ const PeliculasMejoresPuntuadas =({id, categoria, trailer})=>{
                         src={`https://image.tmdb.org/t/p/original${detalle.backdrop_path}`}
                         className= "img"/>
                         <button className="button is-white is-large mt-5">
-                            <Link className="fa fa-play" id="icon-img" to={`/Home/${categoria}/${id}/${id}`}>
-                                <span className="ml-3 subtitle is-6" id="icon" trailer={trailer}>Ver trailer</span>
+                            <Link className="fa fa-play" id="icon-img"> 
+                                <span className="ml-3 subtitle is-6" id="icon">Ver trailer</span>
                             </Link>
                         </button>
                     </figure>
-                    
                     <article key={detalle.id} className="card-content descripcion-carrusel">
                         <h3 className="title is-2 text-aling-start titulo">{detalle.title}</h3>   
                         <h4 className="title is-6">Resumen</h4>
@@ -53,12 +52,14 @@ const PeliculasMejoresPuntuadas =({id, categoria, trailer})=>{
                     </article>                
                 </div>
             </div>
+            
         </>
+        
     )
 }
 
 
-
+//to={`/Home/${params.categoria}/${params.id}/${params.id}`}
 
 
 export default PeliculasMejoresPuntuadas
