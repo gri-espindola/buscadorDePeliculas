@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react"
 
 const useFetchPeliculas = (categoria, tipo) =>{
-    const [peliculas, setPeliculas] = useState([])
-    const [cargando, setCargando] = useState(false) 
+    const [peliculas, setPeliculas] = useState([]);
+    const [cargando, setCargando] = useState(false); 
+    const [busqueda, setBusqueda] = useState("");
 
 
     useEffect(()=> {
@@ -12,12 +13,14 @@ const useFetchPeliculas = (categoria, tipo) =>{
         .then(data => { 
         setPeliculas(data.results);
         setCargando(false);
+        setBusqueda("")
     });
 }, []);
 
   return ({
     peliculas:peliculas, 
-    cargando: cargando
+    cargando: cargando,
+    busqueda: busqueda
   })
 }
 
