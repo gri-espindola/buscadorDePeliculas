@@ -30,7 +30,7 @@ const App =()=>{
     <BrowserRouter>
     <NavBar />
     <Routes>
-      <Route path="/:idCarrusel" element={<Home />}/>
+      <Route path="/" element={<Home />}/>
       <Route path="/Home/:idCarruselDetalles" element={<CarruselDetalles/>}/>
       <Route path="/Home/:idCarruselDetalles/:idTrailerCarrusel" element={<TrailerCarrusel />}/>
       <Route path="/Home/populares/:idPeliculasPopulares" element={<PeliculasPopulares />} />

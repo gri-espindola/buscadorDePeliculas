@@ -11,7 +11,7 @@ const NavBar = () =>{
             <div>
                 <nav className="navbar nav" aria-label="main navigation" role="navigation">
                     <div className="navbar-brand">
-                        <Link className="nav-img" to="/home">
+                        <Link className="nav-img" to="/">
                             <div width="150" height="80">
                             <img src= {blackImg} alt="Logo de página" className=""/>
                             </div>
@@ -24,7 +24,7 @@ const NavBar = () =>{
                         </a>
 
                         <div className="navbar-dropdown">
-                            <Link className="navbar-item nav-link" to="/home">
+                            <Link className="navbar-item nav-link" to="/">
                                 Home
                             </Link>
                             <Link className="navbar-item nav-link" to="/ultimos-lanzamientos">
@@ -42,7 +42,7 @@ const NavBar = () =>{
                     <div className="navbar-menu tabs is-boxed">
                                 
                             <div className="navbar-end">
-                                <Link className="navbar-item nav-link" to="/home">
+                                <Link className="navbar-item nav-link" to="/">
                                     Home
                                 </Link>
                                 <Link className="navbar-item nav-link" to="/ultimos-lanzamientos">
