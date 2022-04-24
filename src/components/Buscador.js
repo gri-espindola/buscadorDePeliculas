@@ -1,4 +1,4 @@
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import useFetchPeliculas from "../hooks/useFetchPeliculas";
 import "./Buscador.scss";
 
