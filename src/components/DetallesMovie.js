@@ -35,7 +35,7 @@ const DetallesMovie =()=>{
                         src={`https://image.tmdb.org/t/p/original${detalle.backdrop_path}`}
                         className= "img"/>
                         <button className="button is-white is-large mt-5">
-                            <Link className="fa fa-play" id="icon-img" to={`/Home/${detalle.video}`}>
+                            <Link className="fa fa-play" id="icon-img" to={`/trailer/${detalle.id}`}>
                                 <span className="ml-3 subtitle is-6" id="icon">Ver trailer</span>
                             </Link>
                         </button>

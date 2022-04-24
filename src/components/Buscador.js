@@ -1,17 +1,26 @@
 import { Link } from "react-router-dom";
-import useFetchPeliculas from "../hooks/useFetchPeliculas";
+import { useState,useEffect } from "react";
 import "./Buscador.scss";
 
 
 
 const Buscador =()=>{
 
+    const [busqueda, setBusqueda] = useState("");
+    const [data, setData] = useState([]);
 
+     useEffect(()=> {
+        fetch(`https://api.themoviedb.org/3/search/movie?api_key=c7e318bc4679faa16a6f940e1435e019&languaje=es-ES&query=${data}&page=1`)
+        .then(res=> res.json())
+        .then(data => { 
+        setBusqueda(data.results);
+    });
+    }, [data]);
 
-    const { busqueda } = useFetchPeliculas("popular","movie");
+    const handleChange =(e) =>{
 
-    //this.state = {value: ''}
-
+        setData(e.target.value)
+    }
 
     return (
         <>
@@ -26,12 +35,11 @@ const Buscador =()=>{
                     className="input is-rounded"
                     type="text"
                     placeholder="Ingresa tu búsqueda aquí"
-                    value={this.state.value}
-                    onChange={this.handleChange}></input>
+                    onChange={handleChange}></input>
                 </form>
                 </div>
                 {<div className="is-flex is-flex-wrap-wrap">
-                    {busqueda.map(pelicula => (
+                    {!!busqueda && busqueda.map(pelicula => (
                         <article style={{width:"300px"}} className="card-lanzamientos">
                             <div className="card-image">
                                 <figure className="image">
@@ -56,7 +64,7 @@ const Buscador =()=>{
                         </article>
                         
                     ))}
-                </div>}    
+                </div>}     
             </div>
         </div>
         </>
