@@ -20,12 +20,12 @@ const App =()=>{
     <NavBar />
     <Routes>
       <Route path="/" element={<Home />}/>
+      <Route path="/detalles-movie/:idPelicula" element={<DetallesMovie />}/>
       <Route path="/detalles-movie/:idPelicula" element={<DetallesMovie />} />
       <Route path="/trailer/:idPelicula" element={<Trailer/>}/>
       <Route path="/ultimos-lanzamientos" element={<UltimosLanzamientos />}/>
       <Route path="/populares" element={<Populares/>}/>
       <Route path="/buscador" element={<Buscador/>}/>
-      <Route path="/detalles-movie/:idPelicula" element={DetallesMovie}/>
     </Routes>
     </BrowserRouter>
   )

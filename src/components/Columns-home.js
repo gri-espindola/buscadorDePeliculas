@@ -2,7 +2,7 @@ import PeliculaItems from "./PeliculaItems";
 import "./Columns-home.scss";
 
 
-const ColumnsHome = ({titulo, cargando, peliculas, categoria, trailer}) =>{
+const ColumnsHome = ({titulo, cargando, peliculas, categoria}) =>{
             
     return(
         <>
@@ -20,7 +20,6 @@ const ColumnsHome = ({titulo, cargando, peliculas, categoria, trailer}) =>{
                                 titulo={detalle.title}
                                 key={detalle.id}
                                 imagen={detalle.poster_path}
-                                trailer={trailer}
                                 />
                             ))}
                             </div>

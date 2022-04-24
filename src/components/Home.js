@@ -36,7 +36,7 @@ const Carrusel =({img})=>{
                   <div className="carousel-caption" style={{textShadow:"2px 2px 2px black"}}>              
                   <h3>{imagen.title}</h3>
                   <p>{imagen.overview}</p>
-                  <Link to={`/Home/${imagen.id}`}>
+                  <Link to={`/detalles-movie/${imagen.id}`}>
                     <button 
                   style={{
                     backgroundColor:"DarkKhaki",
