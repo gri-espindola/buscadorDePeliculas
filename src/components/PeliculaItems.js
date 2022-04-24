@@ -17,7 +17,7 @@ const PeliculaItems = ({titulo, imagen, id, categoria})=>  {
                     <div className="icon-title">
                     <h5 className="is-size-6 titulo">{titulo}</h5>
                         <Link 
-                        to={`/Home/${categoria}/${id}`}
+                        to={`/detalles-movie/${id}`}
                         className="panel-block is-active"
                         >
                         <span className="">

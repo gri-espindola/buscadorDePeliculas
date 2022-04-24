@@ -32,7 +32,7 @@ const {peliculas} = useFetchPeliculas("upcoming", "movie")
                             </div>
                             <div className="icono-posicion">
                             <div className="icon icon-lanzamientos">
-                                <Link className="fa fa-eye" to="/:idDetallesUltimosLanzamientos" >
+                                <Link className="fa fa-eye" to={`/detalles-movie/${pelicula.id}`} >
                                 </Link>
                             </div>
                             </div>
