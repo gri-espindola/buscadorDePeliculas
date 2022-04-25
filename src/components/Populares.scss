@@ -1,0 +1,52 @@
+$bordes: #EC7063;
+$fuente: #FDEDEC;
+
+.box-lanzamientos{
+    background-color: #4e2b33;
+    background-image: linear-gradient(90deg, #4e2b33 0%, #FF6A88 55%, #4e2b33 100%);
+    #container-movies{
+        justify-content: center;
+    }
+
+    .titulo{
+    display: flex;
+    justify-content: center;
+    color: $fuente;
+    padding-top: 20px;
+    font-size: 40px;
+    }
+    .card{
+        border: 3px solid $bordes;
+        margin: 5px;
+        border-radius: 6px;
+        .img-card{
+            height: fit-content;
+        }
+        .card-descripcion{
+        background-color: #4e2b33;
+        background-image: linear-gradient(180deg, #4e2b33 0%, #FF6A88 55%, #4e2b33 100%);
+
+        }
+    .title-movies{
+        text-align: center;
+        padding-top: 10px;
+        font-size: 20px;
+        color: $fuente;
+        .icono-posicion{
+            display: flex;
+            justify-content: center;
+            padding-top: 7px;
+            .fa-eye{
+            font-size: 30px;
+            color: $fuente;                
+                }      
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    #titulo{
+        font-size: 30px;
+    }
+  }

@@ -1,3 +1,11 @@
+$bordes: #EC7063;
+$fuente: #FDEDEC;
+
+#container-buscador{
+    background-color: #FA8BFF;
+    background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+    height: max-content;
+}
 .box-busqueda{
     justify-content: center;
     display: flex;
@@ -5,4 +13,44 @@
     .input-busqueda{
     width: 800px;
 }
+#container-movies{
+    margin-top: 20px;
+    justify-content: center;
 }
+.card{
+    border: 3px solid $bordes;
+    margin: 5px;
+    border-radius: 6px;
+    .img-card{
+        height: fit-content;
+    }
+    .card-descripcion{
+    background-color: #4e2b33;
+    background-image: linear-gradient(180deg, #4e2b33 0%, #FF6A88 55%, #4e2b33 100%);
+
+    }
+    .title-movies{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 20px;
+    color: $fuente;
+    .icono-posicion{
+        display: flex;
+        justify-content: center;
+        padding-top: 7px;
+        .fa-eye{
+        font-size: 30px;
+        color: $fuente;                
+            }      
+        }
+    }
+}
+}
+
+
+@media (max-width: 450px) {
+    #titulo{
+        font-size: 30px;
+    }
+    }
+    

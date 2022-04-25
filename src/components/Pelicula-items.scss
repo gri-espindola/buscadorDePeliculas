@@ -10,3 +10,13 @@
         text-align: center;
     }
 }
+
+@media (max-width: 600px) {
+    .items-movie{
+        padding: 2px;
+    }
+    .icon-title{
+        width: 100%;
+        justify-content: end;
+    }
+  }

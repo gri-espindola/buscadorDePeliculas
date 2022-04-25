@@ -24,38 +24,38 @@ const Buscador =()=>{
 
     return (
         <>
-        <div className="is-flex is-flex-direction-column">
+        <div className="is-flex is-flex-direction-column" id="container-buscador">
             <div className="is-flex is-justify-content-center m-5">
-            <h2 className="title is-2 is-spaced">Busca tu pelicula</h2>
+                <h2 className="title is-2 is-spaced">Busca tu pelicula</h2>
             </div>
             <div className="">
                 <div className="box-busqueda">
-                <form className="input-busqueda">
-                    <input 
-                    className="input is-rounded"
-                    type="text"
-                    placeholder="Ingresa tu búsqueda aquí"
-                    onChange={handleChange}></input>
-                </form>
+                    <form className="input-busqueda">
+                        <input 
+                        className="input is-rounded"
+                        type="text"
+                        placeholder="Ingresa tu búsqueda aquí"
+                        onChange={handleChange}></input>
+                    </form>
                 </div>
-                {<div className="is-flex is-flex-wrap-wrap">
+                {<div className="is-flex is-flex-wrap-wrap is-justify-content-center mt-5">
                     {!!busqueda && busqueda.map(pelicula => (
-                        <article style={{width:"300px"}} className="card-lanzamientos">
+                        <article style={{width:"300px"}} className="card">
                             <div className="card-image">
                                 <figure className="image">
                                     <img 
-                                    className="img-lanzamientos"
+                                    className="img-card"
                                     style={{width:"100%", height:"420px"}}
                                     src={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`}
                                     alt= {pelicula.title}/>
                                 </figure>
                             </div>
                             <div className="card-media card-descripcion">
-                                <div className="media-content title-lanzamientos">
+                                <div className="media-content title-movies is-flex is-justify-content-center subtitle is-6">
                                     <h3 key={pelicula.id}>{pelicula.title}</h3>
                                 </div>
-                                <div className="icono-posicion">
-                                <div className="icon icon-lanzamientos">
+                                <div className="icono-posicion is-flex is-justify-content-center">
+                                <div className="icon icon-movies">
                                     <Link className="fa fa-eye" to={`/detalles-movie/${pelicula.id}`} >
                                     </Link>
                                 </div>

@@ -12,16 +12,16 @@ const ColumnsHome = ({titulo, cargando, peliculas, categoria}) =>{
                             <h3>{titulo}</h3>
                             </p>
                             <div className="movie">
-                            {cargando && <p><h4>Esta cargando</h4></p>}
-                            {peliculas?.map(detalle =>(
-                                <PeliculaItems
-                                id={detalle.id}
-                                categoria={categoria}
-                                titulo={detalle.title}
-                                key={detalle.id}
-                                imagen={detalle.poster_path}
-                                />
-                            ))}
+                                {cargando && <p><h4>Esta cargando</h4></p>}
+                                {peliculas?.map(detalle =>(
+                                    <PeliculaItems
+                                    id={detalle.id}
+                                    categoria={categoria}
+                                    titulo={detalle.title}
+                                    key={detalle.id}
+                                    imagen={detalle.poster_path}
+                                    />
+                                ))}
                             </div>
                         </article>
                     </div>

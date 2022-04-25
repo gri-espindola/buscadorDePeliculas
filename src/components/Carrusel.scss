@@ -1,3 +1,14 @@
-.body{
-    background-color: aqua;
+.button-carrusel{
+    background-color: #F1948A;
 }
+
+
+@media (max-width: 600px) {
+    #carrusel{
+        display: none;
+    }
+    #columnas{
+        display: flex;
+        flex-direction: column;
+    }
+  }

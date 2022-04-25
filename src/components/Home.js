@@ -8,7 +8,7 @@ import ColumnsHome from "./Columns-home";
 import useFetchPeliculas from "../hooks/useFetchPeliculas";
 
 
-const Carrusel =({img})=>{
+const Carrusel =()=>{
 
   const iconArrowLeft = <span className="fa fa-angle-left"></span>;
   const iconArrowRight = <span className="fa fa-angle-right"></span>;
@@ -19,42 +19,48 @@ const Carrusel =({img})=>{
  return(
      <>
       <div className="container-fluid">
-        <Row>
-          <Col span={12}>
-            <RBCarousel
-              autoplay="autoplay"
-              slideshowSpeed={ 2500 }
-              leftIcon={iconArrowLeft}
-              rightIcon={iconArrowRight}
-              animation={true}
-              pauseOnVisibility = {true}
-            >
-               {imagen.map (imagen => <div key={imagen.id} style={{ height: 500 }}>
-                  <img 
-                  src={`https://image.tmdb.org/t/p/original${imagen.backdrop_path}`}
-                  alt={`Poster de ${imagen.title}`}/>
-                  <div className="carousel-caption" style={{textShadow:"2px 2px 2px black"}}>              
-                  <h3>{imagen.title}</h3>
-                  <p>{imagen.overview}</p>
-                  <Link to={`/detalles-movie/${imagen.id}`}>
-                    <button 
-                  style={{
-                    backgroundColor:"DarkKhaki",
-                    color:"black",
-                    borderRadius:"7px",
-                    width:"160px",
-                    border:"Olive, solid, 3px"}}>
-                        Ver más
-                    </button>
-                  </Link>
+        <div id="carrusel">
+          <Row>
+            <Col span={12}>
+              <RBCarousel
+                autoplay="autoplay"
+                slideshowSpeed={ 2500 }
+                leftIcon={iconArrowLeft}
+                rightIcon={iconArrowRight}
+                animation={true}
+                pauseOnVisibility = {true}
+              >
+                {imagen.map (imagen => 
+                <div key={imagen.id} style={{ height: 500 }}>
+                    <img 
+                    src={`https://image.tmdb.org/t/p/original${imagen.backdrop_path}`}
+                    alt={`Poster de ${imagen.title}`}/>
+                    <div 
+                    className="carousel-caption" 
+                    style={{textShadow:"2px 2px 2px black"}}>              
+                    <h3>{imagen.title}</h3>
+                    <p>{imagen.overview}</p>
+                    <Link to={`/detalles-movie/${imagen.id}`}>
+                      <button 
+                    style={{
+                      color:"black",
+                      borderRadius:"7px",
+                      width:"160px",
+                      border:"Olive, solid, 3px"}}
+                    className="button-carrusel">
+                          Ver más
+                      </button>
+                    </Link>
+                    </div>
                   </div>
-              </div>
-                )}
-              
-              </RBCarousel>
+                  )}
+                
+                </RBCarousel>
               </Col>
-          </Row>
-          <div className="container is-flex is-justify-content-center is-align-items-center">
+            </Row>
+          </div>
+
+          <div className="container is-flex is-justify-content-center is-align-items-center" id="columnas">
             <ColumnsHome
             categoria= {"populares"}
             titulo={"Peliculas Populares"}
