@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import "./Trailer.scss"
 
 const Trailer =()=>{
 
@@ -17,13 +18,15 @@ const Trailer =()=>{
 
 
     return(
-        <div>
+        <div className="container-trailer">
             {!!trailer &&
                 trailer.map( video => 
-                    <iframe className="mb-10 h-[18rem] sm:h-[30rem]"
+                    <iframe 
+                    className="mb-10 h-[18rem] sm:h-[30rem]"
                     key={video.id}
                     src={`https://www.youtube.com/embed/${video.key}`}
                     title="videos promocionales"
+                    id="map-trailer"
                     />                        
                 )}
         </div>

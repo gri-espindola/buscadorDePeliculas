@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom"
 import 'bulma/css/bulma.min.css'
-import blackImg from './img-logo/black.png'
+import blackImg from './img-logo/pink.png'
 import './NavBar.scss';
 
 
@@ -17,30 +17,8 @@ const NavBar = () =>{
                             </div>
                         </Link>
                     </div>
-
-                    <div className="navbar-item has-dropdown is-hoverable">
-                        <a href="./home" class="navbar-link" aria-expanded="false">
-                        Menú
-                        </a>
-
-                        <div className="navbar-dropdown">
-                            <Link className="navbar-item nav-link" to="/">
-                                Home
-                            </Link>
-                            <Link className="navbar-item nav-link" to="/ultimos-lanzamientos">
-                                Últimos lanzamientos
-                            </Link>
-                            <Link className="navbar-item nav-link" to="/populares">
-                                Populares
-                            </Link>
-                            <Link className="navbar-item nav-link" to="/buscador">
-                                Buscar
-                            </Link>
-                        </div>
-                    </div>
-
-                    <div className="navbar-menu tabs is-boxed">
-                                
+                
+                    <div className="navbar-menu tabs is-boxed link-space">
                             <div className="navbar-end">
                                 <Link className="navbar-item nav-link" to="/">
                                     Home

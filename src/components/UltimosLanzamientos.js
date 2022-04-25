@@ -1,5 +1,5 @@
 import useFetchPeliculas from "../hooks/useFetchPeliculas";
-import './Ultimos-lanzamientos.scss';
+import './Lanzamientos.scss';
 import {Link} from "react-router-dom";
 
 
@@ -13,29 +13,31 @@ const {peliculas} = useFetchPeliculas("upcoming", "movie")
     return (
         <>
         <div className="box-lanzamientos">
-            <h2 className="title is-2 is-spaced titulo">Ultimos lanzamientos</h2>
-            <div className="is-flex is-flex-wrap-wrap">
+            <h2 className="title is-spaced titulo" id="titulo">Ultimos lanzamientos</h2>
+            <div className="is-flex is-flex-wrap-wrap" id="container-movies">
                 {peliculas.map(pelicula => (
-                    <article style={{width:"300px"}} className="card-lanzamientos">
+                    <article style={{width:"300px"}} className="card">
                         <div className="card-image">
                             <figure className="image">
                                 <img 
-                                className="img-lanzamientos"
+                                className="img-card"
                                 style={{width:"100%", height:"420px"}}
                                 src={`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`}
                                 alt= {pelicula.title}/>
                             </figure>
                         </div>
                         <div className="card-media card-descripcion">
-                            <div className="media-content title-lanzamientos">
+                            <div className="media-content title-movies">
                                 <h3 key={pelicula.id}>{pelicula.title}</h3>
+
+                                <div className="icono-posicion">
+                                    <div className="icon icon-movies">
+                                        <Link className="fa fa-eye" to={`/detalles-movie/${pelicula.id}`} >
+                                        </Link>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="icono-posicion">
-                            <div className="icon icon-lanzamientos">
-                                <Link className="fa fa-eye" to={`/detalles-movie/${pelicula.id}`} >
-                                </Link>
-                            </div>
-                            </div>
+                            
                         </div>
                     </article>
                     

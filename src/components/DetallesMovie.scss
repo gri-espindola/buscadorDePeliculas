@@ -1,0 +1,27 @@
+#descripcion{
+    display: flex;
+    flex-direction: column;
+    filter: opacity(81%);
+    background-color: gray;
+    border-radius: 10px;
+    margin: 5px;
+    
+}
+
+@media (max-width: 600px) {
+    #container-detalles-movie{
+        display: block;
+        #button-detalles{
+            font-size: 10px;
+        }
+        #title-detalles{
+            font-size: 25px;
+        }
+        #descripcion{
+            font-size: 13px;
+        }
+        #generos{
+            font-size: 13px;
+        }
+    }
+  }
