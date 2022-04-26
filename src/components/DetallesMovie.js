@@ -39,7 +39,7 @@ const DetallesMovie =()=>{
                         className= "img"/>
                         <button className="button is-white is-large mt-5" id="button-detalles">
                             <Link className="fa fa-play" id="icon-img" to={`/trailer/${detalle.id}`}>
-                                <span className="ml-3 subtitle is-6" id="icon">Ver trailer</span>
+                                <span className="ml-3 subtitle is-6 " id="icon" >Ver trailer</span>
                             </Link>
                         </button>
                     </figure>

@@ -38,7 +38,7 @@ const Buscador =()=>{
                         onChange={handleChange}></input>
                     </form>
                 </div>
-                {<div className="is-flex is-flex-wrap-wrap is-justify-content-center mt-5">
+                {<div className="is-flex is-flex-wrap-wrap is-justify-content-center mt-5 mb-5">
                     {!!busqueda && busqueda.map(pelicula => (
                         <article style={{width:"300px"}} className="card">
                             <div className="card-image">
