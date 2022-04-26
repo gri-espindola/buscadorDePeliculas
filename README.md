@@ -19,6 +19,6 @@
 
 **_Este debería ser el resultado final de tu instalación_**
 
-![imagen](.src/captura-imagen/imagen.png)
+![imagen](.src/captura-imagen/capture.png)
 
 #### De _Gri_ con ❤ Para todo el 🌍
