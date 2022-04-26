@@ -19,6 +19,6 @@
 
 **_Este debería ser el resultado final de tu instalación_**
 
-![imagen](.app-peliculas/src/captura-imagen/capture.png)
+![imagen](./captura-imagen/capture.png)
 
 #### De _Gri_ con ❤ Para todo el 🌍
