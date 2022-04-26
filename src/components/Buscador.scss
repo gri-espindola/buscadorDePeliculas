@@ -4,19 +4,14 @@ $fuente: #FDEDEC;
 #container-buscador{
     background-color: #FA8BFF;
     background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
-    height: max-content;
 }
 .box-busqueda{
     justify-content: center;
     display: flex;
-
     .input-busqueda{
     width: 800px;
 }
-#container-movies{
-    margin-top: 20px;
-    justify-content: center;
-}
+
 .card{
     border: 3px solid $bordes;
     margin: 5px;

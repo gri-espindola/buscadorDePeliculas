@@ -12,7 +12,7 @@ const ColumnsHome = ({titulo, cargando, peliculas, categoria}) =>{
                             <h3>{titulo}</h3>
                             </p>
                             <div className="movie">
-                                {cargando && <p><h4>Esta cargando</h4></p>}
+                                {cargando && <progress className="progress is-danger" max="50">30%</progress>}
                                 {peliculas?.map(detalle =>(
                                     <PeliculaItems
                                     id={detalle.id}
